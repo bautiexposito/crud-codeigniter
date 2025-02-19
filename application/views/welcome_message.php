@@ -15,7 +15,7 @@
 
 		<!-- Formulario -->
 		 <div class="mb-5">
-			<form action="">
+			<?php echo form_open('welcome/agregar'); ?>
 				<div class="row">
 					<div class="form-group col-sm-4">
 						<label for="">Nombre</label>
@@ -41,7 +41,7 @@
 					</div>
 				</div>
 				<button type="submit" class="btn btn-primary w-100">Guardar</button>
-			</form>
+			<?php echo form_close(); ?>
 		 </div>
 		 
 		<!-- Tabla de datos -->
