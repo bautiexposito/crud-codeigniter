@@ -11,7 +11,8 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$datos['personas'] = $this->Persona->seleccionar_todo();
+		$this->load->view('welcome_message', $datos);
 	}
 
 	public function agregar(){

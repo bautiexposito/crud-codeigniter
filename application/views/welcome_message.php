@@ -54,25 +54,26 @@
 					<table class="table table-striped">
 						<thead>
 							<tr>
-								<th scope="col">#</th>
+								<th scope="col">ID</th>
 								<th scope="col">Nombre</th>
 								<th scope="col">Fecha de nacimiento</th>
-								<th scope="col">Genero</th>
+								<th scope="col">Sexo</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td>Bautista</td>
-								<td>06/11/2000</td>
-								<td>Masculino</td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>Felipe</td>
-								<td>07/10/2004</td>
-								<td>Masculino</td>
-							</tr>
+							<?php
+								$count = 0;
+								foreach ($personas as $persona) {
+									echo '
+										<tr>
+											<td>'.++$count.'</td>
+											<td>'.$persona->nombre.' '.$persona->apellido_paterno.' '.$persona->apellido_materno.'</td>
+											<td>'.$persona->fecha_nacimiento.'</td>
+											<td>'.$persona->sexo.'</td>
+										</tr>
+									';
+								}
+							?>
 						</tbody>
 					</table>
 				</div>
