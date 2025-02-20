@@ -30,4 +30,15 @@ class Welcome extends CI_Controller {
 		$this->Persona->eliminar($id_persona);
 		redirect('welcome');
 	}
+
+	public function editar($id_persona){
+		$persona['nombre'] = $this->input->post('nombre');
+		$persona['apellido_paterno'] = $this->input->post('apellido_paterno');
+		$persona['apellido_materno'] = $this->input->post('apellido_materno');
+		$persona['fecha_nacimiento'] = $this->input->post('fecha_nacimiento');
+		$persona['sexo'] = $this->input->post('sexo');
+
+		$this->Persona->actualizar($persona, $id_persona);
+		redirect('welcome');
+	}
 }
