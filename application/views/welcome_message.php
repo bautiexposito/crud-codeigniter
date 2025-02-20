@@ -58,6 +58,7 @@
 								<th scope="col">Nombre</th>
 								<th scope="col">Fecha de nacimiento</th>
 								<th scope="col">Sexo</th>
+								<th scope="col">Eliminar</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -70,6 +71,7 @@
 											<td>'.$persona->nombre.' '.$persona->apellido_paterno.' '.$persona->apellido_materno.'</td>
 											<td>'.$persona->fecha_nacimiento.'</td>
 											<td>'.$persona->sexo.'</td>
+											<td><a href="'.base_url('welcome/eliminar/'.$persona->id).'" type="button" class="btn btn-danger">Eliminar</a></td>
 										</tr>
 									';
 								}

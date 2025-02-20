@@ -9,5 +9,10 @@
             $this->db->from('personas');
             return $this->db->get()->result();
         }
+
+        public function eliminar($id_persona){
+            $this->db->where('id', $id_persona);
+            $this->db->delete('personas');
+        }
     }
 ?>

@@ -26,4 +26,8 @@ class Welcome extends CI_Controller {
 		redirect('welcome');
 	}
 	
+	public function eliminar($id_persona){
+		$this->Persona->eliminar($id_persona);
+		redirect('welcome');
+	}
 }
